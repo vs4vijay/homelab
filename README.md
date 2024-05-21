@@ -18,9 +18,19 @@ pyinfra server-name deploy.py
 
 ```bash
 
+# Maintained by Debian
+apt-get install docker.io docker-compose -y
+
+OR
+
 curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker $(whoami)
 exit
+
+OR
+
+# Maintained by Docker
+apt-get install docker-ce docker-ce-cli containerd.io -y
 
 ```
 
