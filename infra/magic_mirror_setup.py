@@ -1,6 +1,7 @@
 import pyinfra
 from pyinfra import host, logger
 from pyinfra.operations import apt, server, python, git
+from pyinfra.facts.server import Home
 
 
 apt.update(
@@ -9,12 +10,10 @@ apt.update(
 )
 
 
-
 # @pyinfra.task
 def install_magic_mirror():
-    logger.info('Installing Magic Mirror')
+    logger.info("Installing Magic Mirror")
 
-    
     # Install nodejs
     apt.packages(
         name="Install NodeJS",
@@ -24,36 +23,34 @@ def install_magic_mirror():
         _sudo=True,
     )
 
-
     # Install dependencies and set up Magic Mirror
     # state.package.installed(
     #     name='docker.io'
     # )
 
-    # git.repo(
-    #     name="Clone MagicMirror",
-    #     src="https://github.com/MagicMirrorOrg/MagicMirror",
-    #     dest=f"/home/{host.user}/MagicMirror",
-    # )
+    git.repo(
+        name="Clone MagicMirror",
+        src="https://github.com/MagicMirrorOrg/MagicMirror",
+        dest=f"{server.get_fact(Home)}/MagicMirror",
+    )
 
-    
     result = server.shell(
         commands=["echo output"],
     )
 
-    
     logger.info(f"Got result: {result.stdout}")
+
 
 #     # Add any additional tasks or configurations here
 
 python.call(
-    name='Install MaigcMirror',
+    name="Install MaigcMirror",
     function=install_magic_mirror,
 )
 
 
 server.shell(
-    name='Execute some shell',
+    name="Execute some shell",
     commands=['echo "back to other operations!"'],
 )
 
