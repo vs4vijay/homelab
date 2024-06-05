@@ -13,7 +13,7 @@ def install_docker():
     # Install Docker
     apt.packages(
         name="Installing Docker",
-        packages=["docker.io"],
+        packages=["docker.io", "docker-compose"],
         # apt-get install docker-ce docker-ce-cli containerd.io -y
         present=True,
         update=True,
@@ -41,12 +41,13 @@ def install_docker():
     #     _sudo=True,
     # )
 
+    # TODO: Try this
     # Restart docker daemon service
-    server.shell(
-        name="Restart docker daemon service",
-        commands=["systemctl restart docker"],
-        _sudo=True,
-    )
+    # server.shell(
+    #     name="Restart docker daemon service",
+    #     commands=["systemctl restart docker"],
+    #     _sudo=True,
+    # )
 
 
 python.call(
