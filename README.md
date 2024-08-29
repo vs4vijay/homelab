@@ -1,6 +1,14 @@
 # homelab
 
 
+## Basic Setup
+
+```bash
+
+pyinfra helidon infra/basic_setup.py
+
+```
+
 ## Install PyInfra
 
 ```bash
@@ -8,7 +16,6 @@
 pip install pyinfra
 
 pyinfra ssh-server-name exec -- echo "hello world"
-
 
 pyinfra server-name deploy.py
 

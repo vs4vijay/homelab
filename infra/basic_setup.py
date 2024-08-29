@@ -60,3 +60,13 @@ apt.packages(
     update=True,
     _sudo=True,
 )
+
+
+server.shell(
+    name="Add entry to bashrc",
+    commands=[
+        'echo \'if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then\' >> ~/.bashrc',
+        "echo '  tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux' >> ~/.bashrc",
+        "echo 'fi' >> ~/.bashrc",
+    ],
+)
