@@ -176,13 +176,13 @@ six = ">=1.12,<2.0"
 
 [[package]]
 name = "pulumi-oci"
-version = "2.9.0"
+version = "2.11.0"
 description = "A Pulumi package for creating and managing Oracle Cloud Infrastructure resources."
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pulumi_oci-2.9.0-py3-none-any.whl", hash = "sha256:208accb10ff34388c8551c7d01cf7edaf96f661dbd5e2caeddbadb536a21aea6"},
-    {file = "pulumi_oci-2.9.0.tar.gz", hash = "sha256:1f84c8af2446a1fa669cd54d7815c5937bdd7f9ffee565c173a755219dfd9b1c"},
+    {file = "pulumi_oci-2.11.0-py3-none-any.whl", hash = "sha256:5bcbe859bc6009e37d06f4fc3079b53d87986f46f30402df420aa350d2c013b5"},
+    {file = "pulumi_oci-2.11.0.tar.gz", hash = "sha256:dda9f8e47213b84fa01050e33717a4b142034fabba6b4c685d749c22422daa23"},
 ]
 
 [package.dependencies]
