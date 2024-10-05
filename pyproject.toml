@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "homelab"
+version = "0.1.0"
+description = ""
+authors = ["vs4vijay <vs4vijay@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pulumi = "^3.130.0"
+pulumi-oci = "^2.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

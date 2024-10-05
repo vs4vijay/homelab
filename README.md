@@ -82,4 +82,16 @@ https://phoenixnap.com/kb/how-to-install-kubernetes-on-a-bare-metal-server
 
 https://dockerlabs.collabnix.com/kubernetes/beginners/install/ubuntu/18.04/install-k8s.html
 
+
+oci session authenticate
+
+
+terraform init
+
+terraform plan
+
+terraform validate
+
+terraform apply
+
 ```
