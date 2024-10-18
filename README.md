@@ -1,6 +1,18 @@
 # homelab
 
 
+
+## Install PyInfra
+
+```bash
+
+pip install pyinfra
+
+pyinfra server_name deploy.py
+pyinfra server_name exec -- echo "hello world"
+
+```
+
 ## Basic Setup
 
 ```bash
@@ -9,24 +21,19 @@ pyinfra helidon infra/basic_setup.py
 
 ```
 
-## Install PyInfra
-
-```bash
-
-pip install pyinfra
-
-pyinfra ssh-server-name exec -- echo "hello world"
-
-pyinfra server-name deploy.py
-
-```
 
 ## Install Docker
 
 ```bash
 
+# Maintained by Docker
+sudo apt install docker-ce docker-ce-cli containerd.io -y
+
+OR
+
 # Maintained by Debian
-apt-get install docker.io docker-compose -y
+sudo apt install docker.io docker-compose -y
+chmod 666 path
 
 OR
 
@@ -34,10 +41,15 @@ curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker $(whoami)
 exit
 
-OR
+```
 
-# Maintained by Docker
-apt-get install docker-ce docker-ce-cli containerd.io -y
+---
+
+## Install Portainer
+
+```bash
+
+docker compose -f portainer.docker-compose.yml up -d
 
 ```
 

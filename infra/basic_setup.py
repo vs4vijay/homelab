@@ -7,10 +7,11 @@ apt.update(
     _sudo=True,
 )
 
-apt.upgrade(
-    name="Upgrade all packages",
-    _sudo=True,
-)
+# FIXME: This causes the script to hang
+# apt.upgrade(
+#     name="Upgrade all packages",
+#     _sudo=True,
+# )
 
 apt.packages(
     name="Ensure the essential tools are installed",
