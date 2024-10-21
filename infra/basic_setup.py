@@ -29,6 +29,7 @@ apt.packages(
         "screen",
         "tmux",
         "rsync",
+        "netcat",
     ],
     update=True,
     _sudo=True,

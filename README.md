@@ -41,6 +41,11 @@ curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker $(whoami)
 exit
 
+OR
+
+sudo curl -sSL https://get.docker.com/ | CHANNEL=stable bash
+sudo systemctl enable docker --now
+
 ```
 
 ---
