@@ -29,9 +29,9 @@ apt.packages(
         "screen",
         "tmux",
         "rsync",
-        "netcat",
+        # "netcat", "netcat-traditional",
     ],
-    update=True,
+    # update=True,
     _sudo=True,
 )
 
@@ -46,8 +46,12 @@ apt.packages(
         "ncdu",
         "mtr",
         "jq",
+        "nmap",
+        # "dnsutils",
+        # "tcpdump",
+        # "tshark",
     ],
-    update=True,
+    # update=True,
     _sudo=True,
 )
 
@@ -59,7 +63,7 @@ apt.packages(
         "python3-dev",
         "python3-pip",
     ],
-    update=True,
+    # update=True,
     _sudo=True,
 )
 

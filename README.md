@@ -25,6 +25,13 @@ pyinfra helidon infra/basic_setup.py
 ## Install Docker
 
 ```bash
+sudo curl -fsSL https://get.docker.com/ | CHANNEL=stable bash
+curl -fsSL https://get.docker.com | sh
+sudo usermod -aG docker $(whoami)
+sudo systemctl enable docker --now
+exit # exit all terminals to reflect the changes
+
+OR
 
 # Maintained by Docker
 sudo apt install docker-ce docker-ce-cli containerd.io -y
@@ -34,17 +41,6 @@ OR
 # Maintained by Debian
 sudo apt install docker.io docker-compose -y
 chmod 666 path
-
-OR
-
-curl -sSL https://get.docker.com | sh
-sudo usermod -aG docker $(whoami)
-exit
-
-OR
-
-sudo curl -sSL https://get.docker.com/ | CHANNEL=stable bash
-sudo systemctl enable docker --now
 
 ```
 

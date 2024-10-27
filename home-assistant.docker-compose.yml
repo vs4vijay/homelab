@@ -13,7 +13,12 @@ services:
         mkdir -p /config
 
         tee /config/configuration.yaml <<EOF
-          default_config:
+          default_config: null
+          
+          http:
+            use_x_forwarded_for: true
+            trusted_proxies:
+              - 172.28.0.2
           
           homeassistant:
             name: vizhass
@@ -24,7 +29,7 @@ services:
             currency: USD
             temperature_unit: C
             time_zone: America/Los_Angeles
-            external_url: https://vizhass.duckdns.org
+            external_url: https://hass.vizhass.duckdns.org
             internal_url: http://vizhass:8123
             allowlist_external_dirs:
               - /config
