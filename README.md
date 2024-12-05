@@ -110,4 +110,17 @@ terraform apply
 
 https://github.com/wemake-services/caddy-gen
 
+
+blkid
+lsblk
+
+# Manual Mount
+mount /dev/sda2 /mnt/wd1tb
+
+# Auto Mount - Get UUID, edit fstab, run command
+echo '/dev/sda2 /mnt/wd1tb ext4 defaults 0 2' | sudo tee -a /etc/fstab
+
+
+sudo mount -a
+
 ```
