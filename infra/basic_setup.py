@@ -47,6 +47,7 @@ apt.packages(
         "mtr",
         "jq",
         "nmap",
+        "btop",
         # "dnsutils",
         # "tcpdump",
         # "tshark",
