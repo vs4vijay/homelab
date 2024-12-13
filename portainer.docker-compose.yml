@@ -1,5 +1,9 @@
 version: "3.8"
 
+# sudo curl -fsSL https://get.docker.com/ | CHANNEL=stable bash
+# sudo usermod -aG docker $(whoami)
+# docker compose -f portainer.docker-compose.yml up -d
+
 services:
   portainer:
     image: portainer/portainer-ce:2.24.1
