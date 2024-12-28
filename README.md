@@ -59,6 +59,7 @@ docker compose -f portainer.docker-compose.yml up -d
 ## Run Services
 
 - Run caddy
+- Run glances
 - Run wireguard
 - Run ntfy
 - Run pairdrop
@@ -129,7 +130,12 @@ mount /dev/sda2 /mnt/wd1tb
 # Auto Mount - Get UUID, edit fstab, run command
 echo '/dev/sda2 /mnt/wd1tb ext4 defaults 0 2' | sudo tee -a /etc/fstab
 
-
 sudo mount -a
+
+
+
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+sudo iptables-save
+sudo netfilter-persistent save
 
 ```
