@@ -54,6 +54,15 @@ docker compose -f portainer.docker-compose.yml up -d
 
 ```
 
+---
+
+## Run Services
+
+- Run caddy
+- Run wireguard
+- Run ntfy
+- Run pairdrop
+- Run syncthing
 
 ---
 
