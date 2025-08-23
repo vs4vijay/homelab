@@ -10,7 +10,7 @@ package-mode = false
 [tool.poetry.dependencies]
 python = "^3.10"
 pulumi = "^3.130.0"
-pulumi-oci = "^2.9.0"
+pulumi-oci = "^3.0.0"
 
 
 [build-system]
