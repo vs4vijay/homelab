@@ -1,12 +1,13 @@
-version: "3.8"
-
 # sudo curl -fsSL https://get.docker.com/ | CHANNEL=stable bash
 # sudo usermod -aG docker $(whoami)
 # docker compose -f portainer.docker-compose.yml up -d
 
+version: "3.8"
+name: portainer
+
 services:
   portainer:
-    image: portainer/portainer-ce:2.24.1
+    image: portainer/portainer-ce:2.33.0
     container_name: portainer
     ports:
       - 6060:9443
