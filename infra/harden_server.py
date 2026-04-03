@@ -3,13 +3,13 @@ from pyinfra.operations import apt, server
 
 
 # Change SSH port to 22222
-server.shell(
-    name='Change SSH port',
-    commands=[
-        'sed -i "s/#Port 22/Port 22222/" /etc/ssh/sshd_config',
-        # 'systemctl restart sshd',
-    ],
-)
+# server.shell(
+#     name='Change SSH port',
+#     commands=[
+#         'sed -i "s/#Port 22/Port 22222/" /etc/ssh/sshd_config',
+#         # 'systemctl restart sshd',
+#     ],
+# )
 
 # Disable password authentication and allow only public key authentication
 server.shell(

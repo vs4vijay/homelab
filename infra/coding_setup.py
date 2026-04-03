@@ -34,15 +34,11 @@ server.shell(
 )
 
 server.shell(
-	name="Ensure uv and bun are on PATH",
+	name="Ensure uv, bun, and mise are configured",
 	commands=[
 		(
 			"grep -qxF 'export PATH=\"$HOME/.local/bin:$HOME/.bun/bin:$PATH\"' ~/.bashrc "
 			"|| echo 'export PATH=\"$HOME/.local/bin:$HOME/.bun/bin:$PATH\"' >> ~/.bashrc"
-		),
-		(
-			"grep -qxF 'export PATH=\"$HOME/.local/bin:$HOME/.bun/bin:$PATH\"' ~/.profile "
-			"|| echo 'export PATH=\"$HOME/.local/bin:$HOME/.bun/bin:$PATH\"' >> ~/.profile"
-		),
+		)
 	],
 )
